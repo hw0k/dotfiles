@@ -1,0 +1,22 @@
+[user]
+  name = Hyunwook Nam
+  email = hw0knam@gmail.com
+[init]
+  defaultBranch = main
+[core]
+  ignoreCase = false
+[pull]
+  twohead = ort
+[push]
+  autoSetupRemote = true
+[fetch]
+  prune = true
+[github]
+  user = hw0k
+[credential]
+  helper = /usr/local/share/gcm-core/git-credential-manager
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
