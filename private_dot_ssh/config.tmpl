@@ -1,8 +1,10 @@
+{{ if eq .chezmoi.os "darwin" -}}
 # Added by OrbStack: 'orb' SSH host for Linux machines
 # This only works if it's at the top of ssh_config (before any Host blocks).
 # This won't be added again if you remove it.
 Include ~/.orbstack/ssh/config
 
+{{ end -}}
 Host github.com
   AddKeysToAgent yes
   UseKeychain yes
@@ -12,4 +14,3 @@ Host hw0k.iptime.org
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
-
