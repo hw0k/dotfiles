@@ -1,6 +1,6 @@
-
+{{ if eq .chezmoi.os "darwin" -}}
 # Added by Toolbox App
-export PATH="$PATH:/Users/hw0k/Library/Application Support/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -11,3 +11,4 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 # Added by Obsidian
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+{{ end -}}

@@ -13,8 +13,10 @@
   prune = true
 [github]
   user = hw0k
+{{ if eq .chezmoi.os "darwin" -}}
 [credential]
   helper = /usr/local/share/gcm-core/git-credential-manager
+{{ end -}}
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
